@@ -8,19 +8,28 @@ function FormInput (){
   return <div>form input</div>
 }
 
-function UsersView (){
+function UsersView (props){
   // props: user (filteredUsers)
   // button to filter by name
     // onClick -> this.sort
     return (
       <div>
-        <h1 className="text-center">Make New Friends</h1>
-        <h3 className="text-center">
-          Thumbs up on any pups you'd like to meet!
-        </h3>
-        <Card image={this.state.name} />
+        <p>{props.user.name.first} {props.user.name.last}</p>
+        <p>{props.user.phone}</p>
+        <p>{props.user.email}</p>
+        <p>{props.user.dob.date}</p>
       </div>
     );
+}
+
+function Header (){
+  return (
+    <div>
+ <h1 className="text-center">Employee Directory</h1>
+        <h3 className="text-center">
+          Thumbs up on any pups you'd like to meet!
+        </h3> 
+  </div>)
 }
 
 class App extends React.Component{
@@ -30,44 +39,35 @@ state = {
   filteredUsers: [],
   searchTerm : "",
   // sortOption
+  // state property for each column and don't .reverse unless sortOption is sorted / descending 
 }
 
 // component did mount
 
 componentDidMount() {
   this.getUsers()
-  .catch(err => console.log(err));
 }
 
 getUsers = () => {
     // call API (utils)
   API.getUsers()
-    .then(res => 
-      // console.log(res.data.picture.thumbnail)
+    .then((res) => {
+      console.log(res)
           // set state
       this.setState({
-        allUsers : {
-        ...this.state.allUsers,
-        image : res.data.picture.thumbnail,
-        name : res.data.name.first + res.data.name.last,
-        phone: res.data.phone,
-        email: res.data.email,
-        dob: res.data.dob.date}
-
-      })
-    )
-    .catch(err => console.log(err));
+        allUsers : res.data.results
+      })})
 };
       // set up allUsers : [], filteredUsers: []
 
   // handleInputChange
   handleInputChange = event => {
     // change (setState) searchTerm
-
     this.setState({ searchTerm: event.target.value });
 
     // filter users on searchTerm
-    // sort iif relevant
+      // use javascript function 
+    // sort if relevant (nice to have)
   };
 
    // sortUsers
@@ -77,8 +77,14 @@ getUsers = () => {
 render(){
   return (
     <div className= "App">
-      <FormInput />
-      <UsersView />
+      <Header />
+      {/* <FormInput /> */}
+      {this.state.allUsers.map((user,index) => (
+        // console.log(user)
+          <UsersView user = {user} key={index}/>
+      )
+      )}
+      {/* <UsersView users = {this.state.allUsers}/> */}
     </div>
       );
 }
