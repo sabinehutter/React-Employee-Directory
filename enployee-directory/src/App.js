@@ -13,11 +13,15 @@ function UsersView (props){
   // button to filter by name
     // onClick -> this.sort
     return (
+
       <div>
-        <p>{props.user.name.first} {props.user.name.last}</p>
-        <p>{props.user.phone}</p>
-        <p>{props.user.email}</p>
-        <p>{props.user.dob.date}</p>
+        <div class="row">
+        <div class="col"><img src={props.user.picture.thumbnail} alt="User Photo"></img></div>
+        <div class="col"><p>{props.user.name.first} {props.user.name.last}</p></div>
+        <div class="col"><p>{props.user.phone}</p></div>
+        <div class="col"><p>{props.user.email}</p></div>
+        <div class="col"><p>{props.user.dob.date.substring(0,10)}</p></div>
+      </div>
       </div>
     );
 }
@@ -25,10 +29,13 @@ function UsersView (props){
 function Header (){
   return (
     <div>
- <h1 className="text-center">Employee Directory</h1>
-        <h3 className="text-center">
-          Thumbs up on any pups you'd like to meet!
-        </h3> 
+
+<div class="jumbotron jumbotron-fluid" style={{backgroundColor: "#16204B", borderBottom: "8px solid red", margin: "0px auto"}}>
+  <div class="container">
+    <h1 class="display-4" style={{color: "white"}} >Employee Directory</h1>
+    <p class="lead .bg-primary" style={{color: "white"}} >Click on carrots to filter by heading or use the search box to narrow your results.</p>
+  </div>
+</div>
   </div>)
 }
 
