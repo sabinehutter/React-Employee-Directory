@@ -4,13 +4,22 @@
   # Welcome to an Easy Way to Track Your Employees!  
 
   ## Description
-   This application allows you to automatically track your transcations!
+   This application allows you to view your employe directory!
 
-   ![Application Entry](https://github.com/sabinehutter/Budget-App/blob/main/public/icons/budget-app-home.png)
+   ![Application Entry](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/directory-home.png)
 
-   Whene you first launch the application you will be prompted to enter a transaction. You are able to make deposits and withdraws.
+   Whene you first launch the application you will be greeted with the directory landing page seen above.
       
-   The visualization on the bottom of the applcation allows you to see your transactions over time. 
+   You are able to sort the employees by name and searrch the directory by the employees first name. 
+   
+   ![Search Example](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/directory-home.png)
+
+   To sort the users simply click on the "Name" ccolumn header. The sorting will default to show ascending then descending. 
+   
+   ![Search Example](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/directory-home.png)
+
+   ![Search Example](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/directory-home.png)
+
     
   ## Hosted Application
   
