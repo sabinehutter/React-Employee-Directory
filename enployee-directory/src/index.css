@@ -11,4 +11,11 @@
     padding: 0;
     margin: 0;
   }
+
+  user-images {
+      display: block;
+      margin-left: auto;
+      margin-right:auto;
+      width:25%;
+  }
   
