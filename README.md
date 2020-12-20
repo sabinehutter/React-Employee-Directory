@@ -16,9 +16,9 @@
 
    To sort the users simply click on the "Name" ccolumn header. The sorting will default to show ascending then descending. 
    
-   ![Search Example](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/directory-home.png)
+   ![Ascending Example](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/employee-ascending.png)
 
-   ![Search Example](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/directory-home.png)
+   ![Descending Example](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/employee-descending.png)
 
     
   ## Hosted Application
