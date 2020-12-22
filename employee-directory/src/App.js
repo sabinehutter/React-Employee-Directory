@@ -88,12 +88,13 @@ componentDidMount() {
 
         this.setState(
           {
-            [name]: {value},
+            [name]: value,
           },
           () => {
+            console.log(this.state.allUsers)
               const filtered = this.state.allUsers.filter((result) =>
                 // console.log(result)
-                result.name.first.includes(this.state.searchName)
+                result.name.first.includes(this.state.searchTerm)
               );
               console.log(filtered);
               this.setState({
@@ -137,9 +138,9 @@ render(){
   return (
     <div className="App">
         <Header />
-        <nav class="navbar navbar-light bg-light mx-auto" style={{height : "100px"}}>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" onChange = {this.handleSearchChange} value = {this.state.searchTerm}></input>
+        <nav className="navbar navbar-light bg-light mx-auto" style={{height : "100px"}}>
+        <form className="form-inline">
+          <input className="form-control mr-sm-2" name="searchTerm" type="text" placeholder="Search" aria-label="Search" onChange = {this.handleSearchChange} value ={this.state.searchTerm}></input>
         </form>
       </nav>
       <div className="row">
@@ -150,7 +151,7 @@ render(){
             <div className="table-title col">DOB</div>
           </div>
         {/* <FormInput /> */}
-        {this.state.allUsers.map((user, index) => (
+        {this.state.filteredUsers.map((user, index) => (
           // console.log(user)
           <UsersView user={user} key={index} />
         )
