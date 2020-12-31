@@ -23,7 +23,7 @@
     
   ## Hosted Application
   
-   The application is hosted on Heroku and can be found here https://budget-your-money.herokuapp.com/
+   The application is hosted on Heroku and can be found here https://sabinehutter.github.io/React-Employee-Directory/
     
   ## Table of Contents
   Navigate through the README Using the Table of Contents : 
