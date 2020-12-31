@@ -4,7 +4,7 @@
   # Welcome to an Easy Way to Track Your Employees!  
 
   ## Description
-   This application allows you to view your employe directory!
+   This application allows you to view your employee directory!
 
    ![Application Entry](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/directory-home.png)
 
