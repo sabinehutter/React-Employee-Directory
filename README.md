@@ -8,7 +8,7 @@
 
    ![Application Entry](https://github.com/sabinehutter/React-Employee-Directory/blob/main/enployee-directory/public/directory-home.png)
 
-   Whene you first launch the application you will be greeted with the directory landing page seen above.
+   When you first launch the application you will be greeted with the directory landing page seen above.
       
    You are able to sort the employees by name and searrch the directory by the employees first name. 
    
